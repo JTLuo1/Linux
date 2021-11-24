@@ -1,10 +1,10 @@
-{% if grains['osmajorrelease'] == 8% }
+{% if grains['osmajorrelease'] == 8 %}
 mysql-dep-package:
   pkg.installed:
     - name: ncurses-compat-libs
 {% endif %}
 
-{% if grains['osmajorrelease'] == 7% }
+{% if grains['osmajorrelease'] == 7 %}
 libaio-devel:
   pkg.installed
 {% endif %}
