@@ -1,5 +1,13 @@
-ncurses-compat-libs:
+{% if grains['osmajorrelease'] == 8% }
+mysql-dep-package:
+  pkg.installed:
+    - name: ncurses-compat-libs
+{% endif %}
+
+{% if grains['osmajorrelease'] == 7% }
+libaio-devel:
   pkg.installed
+{% endif %}
 
 create-mysql-user:
   user.present:
